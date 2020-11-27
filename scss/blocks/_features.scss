@@ -1,0 +1,118 @@
+.features{
+    margin-top: -11px;
+}
+
+.features__container{
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+}
+
+.features__list{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.features__item{
+    display: flex;
+    flex-direction: column;
+    padding: 39px 36px 56px;
+    max-width: 300px;
+    background-color: $orange-color;
+    border-radius: 5px;
+}
+
+.features__item--prosthetics{
+    padding: 39px 50px 31px;
+    background-color: #FFE040;
+}
+
+.features__title{
+    margin-top: 0px;
+    margin-bottom: 4px;
+    line-height: 21px;
+    font-weight: normal;
+    font-size: 18px;
+    color: $heading-color;
+    text-align: center;
+
+    &::before{
+        content: "";
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 19px;
+        width: 87px;
+        height: 87px;
+        background-image: url("../img/treatment.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        mix-blend-mode: multiply;
+    }
+}
+
+.features__item--prosthetics .features__title{
+
+    &::before{
+        background-image: url("../img/prosthetics.png");
+    }
+}
+
+.features__description{
+    margin: 0;
+    font-weight: 300;
+    line-height: 25px;
+    color: $heading-color;
+}
+
+.features .appointment{
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+}
+
+@media only screen and (max-width: 1200px){
+    .features .appointment{
+        position: relative;
+        bottom: 0;
+        right: 0px;
+    }
+}
+
+@media only screen and (max-width: 955px){
+    .features__container{
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 910px){
+    .features__list{
+        display: none;
+    }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+    
+    .features__title{
+
+        &::before{
+            background-image: url("../img/treatment@2x.png");
+        }
+    }
+    
+    .features__item--prosthetics .features__title{
+
+        &::before{
+            background-image: url("../img/prosthetics@2x.png");
+        }
+    }
+}

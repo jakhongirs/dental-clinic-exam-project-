@@ -1,0 +1,91 @@
+.appointment{
+    width: 540px;
+    padding: 25px 34px 18px;
+    background-color: $blue-color;
+    border-radius: 5px;
+}
+
+.appointment__heading{
+    margin-top: 0;
+    margin-bottom: 29px;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+    color: #FFFFFF;
+}
+
+.appointment__input{
+    padding: 20px 15px;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(255, 255, 255, 0.5);
+    outline: none;
+    
+    &:focus{
+        background-color: #FFFFFF;
+        border: 1px solid #0055B8;
+        color: $heading-color;
+    }
+}
+
+.appointment__input{
+    margin-bottom: 12px;
+}
+
+.appointment__button{
+    padding: 17px 63px;
+    line-height: 21px;
+    color: $heading-color;
+    width: 100%;
+    background-color: $orange-color; 
+    border: none;
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+    
+    &:hover{
+        opacity: 0.8;
+    }
+    
+    &:active{
+        opacity: 0.6;
+    }
+}
+
+.appointment__checkbox-wrapper{
+    display: flex;
+    align-items: flex-end;
+}
+
+.appointment__confirm{
+    margin-top: 22px;
+    margin-bottom: 0;
+    max-width: 256px;
+    font-weight: 300;
+    line-height: 21px;
+    color: #FFFFFF;
+    margin-right: 10px;
+}
+
+.appointment__checkbox:checked ~ .appointment__custom-checkbox{
+    background-image: url("../img/checked.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.appointment__custom-checkbox{
+    padding: 17px;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    margin-left: auto;
+}
+
+@media only screen and (max-width: 910px){
+    .appointment{
+        width: 100%;
+    }
+}

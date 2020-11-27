@@ -1,0 +1,126 @@
+.sitenav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    max-width: 1140px;
+    width: 100%;
+    transform: translate(-50%,-50%);
+    padding: 20px 33px 20px 30px;
+    border-radius: 5px;
+    background-color: $blue-color;
+}
+
+.sitenav__list{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sitenav__item + .sitenav__item{
+    margin-left: 35px;
+}
+
+.sitenav__link{
+    line-height: 21px;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover{
+        color: $orange-color;
+    }
+
+    &:active{
+        opacity: 0.6;
+    }
+}
+
+/* Socials */
+.sitenav__social-list{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-left: auto;
+}
+
+.sitenav__social-item + .sitenav__social-item{
+    margin-left: 13px;
+}
+
+.sitenav__social-link{
+    display: block;
+    transition: opacity 0.3s ease;
+
+    &:hover{
+        opacity: 0.8;
+    }
+
+    &:active{
+        opacity: 0.6;
+    }
+}
+
+.sitenav__social-img{
+    display: block;
+}
+
+@media only screen and (max-width: 1024px){
+    .sitenav{
+        position: relative;
+        padding: 0;
+        left: 0;
+        top: 0;
+        transform: translate(0, 0);
+        border-radius: 0px;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 830px){
+    .sitenav{
+        display: none;
+    }
+
+    .site-header--open .sitenav{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .site-header--open .sitenav__list{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .site-header--open .sitenav__item{
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .site-header--open .sitenav__social-list{
+        margin-left: 0px;
+    }
+
+    .site-header--open .sitenav__link{
+        color: $orange-color;
+        padding-top: 25px;
+        padding-bottom: 25px;
+
+        &:hover{
+            color: $blue-color;
+            background-color: $orange-color;
+        }
+    }
+}
